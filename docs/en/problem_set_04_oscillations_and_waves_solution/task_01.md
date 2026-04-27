@@ -109,5 +109,3 @@ $$
 - Velocity is maximal at equilibrium ($x = 0$).
 - Acceleration is maximal at extreme displacements ($x = \pm A$).
 - Higher $\omega$ leads to significantly larger acceleration due to the $\omega^2$ dependence.
-
----
