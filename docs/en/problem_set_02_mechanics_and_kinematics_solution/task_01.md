@@ -5,12 +5,12 @@
 The equation of motion:
 
 $$
-x(t) = x_0 + v_0 t + \frac{1}{2} a t^2
+x(t) = x_0 + v_0 t + \frac{1}{2}a t^2
 $$
 
 ---
 
-## 1. Velocity and Acceleration
+## Part 1 – Velocity and Acceleration
 
 **Velocity** — first derivative of position with respect to time:
 
@@ -32,21 +32,19 @@ $$
 \boxed{a(t) = a = \text{const}}
 $$
 
-The acceleration is constant — this confirms the motion is **uniformly accelerated**.
+The acceleration is **constant** — this is the definition of uniformly accelerated motion.
 
 ---
 
-## 2. Numerical Example
+## Part 2 – Numerical Example
 
-Parameters: $x_0 = 0$, $v_0 = 5\ \text{m/s}$, $a = -2\ \text{m/s}^2$
-
-The equations become:
+### Given parameters:
 
 $$
-x(t) = 5t - t^2, \qquad v(t) = 5 - 2t, \qquad a(t) = -2\ \text{m/s}^2
+x_0 = 0\ \text{m}, \qquad v_0 = 5\ \frac{\text{m}}{\text{s}}, \qquad a = -2\ \frac{\text{m}}{\text{s}^2}
 $$
 
-### Stopping Time
+### Stopping time
 
 The body stops when $v(t) = 0$:
 
@@ -58,59 +56,45 @@ $$
 t_{\text{stop}} = -\frac{5}{-2} = \boxed{2.5\ \text{s}}
 $$
 
-### Maximum Velocity
+### Maximum velocity
 
-Since $a < 0$, the velocity **decreases** over time. The maximum velocity occurs at $t = 0$:
+Since $a < 0$, the velocity **decreases** over time. Therefore:
+
+- The **maximum velocity** occurs at $t = 0$:
 
 $$
-v_{\text{max}} = v(0) = v_0 = \boxed{5\ \text{m/s}}
+v_{\max} = v_0 = 5\ \frac{\text{m}}{\text{s}}
 $$
 
 **General rule:**
-- If $a > 0$: velocity increases indefinitely — there is no maximum (in the classical sense).
-- If $a < 0$: velocity decreases; maximum is at $t = 0$ (assuming $v_0 > 0$).
-- If $a = 0$: uniform motion, $v = v_0 = \text{const}$.
+- If $a > 0$: velocity increases without bound — $v_{\max}$ occurs at the latest time considered.
+- If $a < 0$: velocity decreases — $v_{\max} = v_0$ at $t = 0$, then the body decelerates and stops.
+- If $a = 0$: uniform motion, $v(t) = v_0 = \text{const}$.
 
-### Maximum Displacement
+### Maximum displacement
 
-Maximum displacement occurs at $t = t_{\text{stop}} = 2.5\ \text{s}$ (when the body momentarily stops):
-
-$$
-x_{\text{max}} = x(t_{\text{stop}}) = x_0 + v_0 t_{\text{stop}} + \frac{1}{2}a\, t_{\text{stop}}^2
-$$
+The maximum displacement is reached at $t = t_{\text{stop}} = 2.5\ \text{s}$, because after this moment the body would move backwards (velocity becomes negative):
 
 $$
-x_{\text{max}} = 0 + 5 \cdot 2.5 + \frac{1}{2}(-2)(2.5)^2
+x_{\max} = x(t_{\text{stop}}) = x_0 + v_0 t_{\text{stop}} + \frac{1}{2}a\, t_{\text{stop}}^2
 $$
 
 $$
-x_{\text{max}} = 12.5 - \frac{1}{2} \cdot 2 \cdot 6.25 = 12.5 - 6.25
+x_{\max} = 0 + 5 \cdot 2.5 + \frac{1}{2}\cdot(-2)\cdot(2.5)^2
 $$
 
 $$
-\boxed{x_{\text{max}} = 6.25\ \text{m}}
+x_{\max} = 12.5 - 1 \cdot 6.25 = 12.5 - 6.25
 $$
 
-Alternatively, using the kinematic formula $v^2 = v_0^2 + 2a\,\Delta x$ with $v = 0$:
-
 $$
-0 = v_0^2 + 2a\,x_{\text{max}} \implies x_{\text{max}} = -\frac{v_0^2}{2a} = -\frac{25}{-4} = 6.25\ \text{m} \quad \checkmark
+\boxed{x_{\max} = 6.25\ \text{m}}
 $$
 
 ---
 
-## 3. Summary Table
+## Part 3 – Visualization (HTML/JS)
 
-| Quantity | Formula | Value (numerical example) |
-|---|---|---|
-| Stopping time | $t_{\text{stop}} = -v_0/a$ | $2.5\ \text{s}$ |
-| Maximum velocity | $v_{\text{max}} = v_0$ (for $a < 0$) | $5\ \text{m/s}$ |
-| Maximum displacement | $x_{\text{max}} = -v_0^2/(2a)$ | $6.25\ \text{m}$ |
+Save the file below as `task_01_visualization.html` in the same solution folder and open it in a browser.
 
----
-
-## Physical Interpretation
-
-- The position $x(t)$ is a **parabola** opening downward (since $a < 0$).
-- The velocity $v(t)$ is a **linear function** decreasing from $5\ \text{m/s}$ to $0$ at $t = 2.5\ \text{s}$, then becoming negative (body reverses direction).
-- The acceleration $a(t)$ is a **horizontal line** at $-2\ \text{m/s}^2$ — constant throughout.
+The app plots $x(t)$, $v(t)$, $a(t)$ with sliders for $x_0$, $v_0$, and $a$.
