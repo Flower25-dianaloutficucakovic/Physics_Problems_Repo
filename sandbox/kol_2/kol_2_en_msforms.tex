@@ -268,10 +268,12 @@ All resistors in the circuit below have resistance $1\ \Omega$.
   \node[resistor] (R4b) at (8.6,0.35) {$1\,\Omega$};
   \node[resistor] (R4c) at (8.6,-0.35) {$1\,\Omega$};
   \node[resistor] (R4d) at (8.6,-1.05) {$1\,\Omega$};
-  \draw (P3) -- ++(0,1.05) -- (R4a.west);
-  \draw (P3) -- ++(0,0.35) -- (R4b.west);
-  \draw (P3) -- ++(0,-0.35) -- (R4c.west);
-  \draw (P3) -- ++(0,-1.05) -- (R4d.west);
+  \coordinate (P3out) at (7.45,0);
+  \draw (P3) -- (P3out);
+  \draw (P3out) -- ++(0,1.05) -- (R4a.west);
+  \draw (P3out) -- ++(0,0.35) -- (R4b.west);
+  \draw (P3out) -- ++(0,-0.35) -- (R4c.west);
+  \draw (P3out) -- ++(0,-1.05) -- (R4d.west);
   \draw (R4a.east) -| (P4);
   \draw (R4b.east) -| (P4);
   \draw (R4c.east) -| (P4);
@@ -318,10 +320,10 @@ A capacitor $C$ is initially uncharged. At $t=0$, it is connected to a DC voltag
   \draw (-0.36,0.85) -- (0.36,0.85);
   \draw (-0.18,0.45) -- (0.18,0.45);
   \node[left] at (-0.55,0.65) {$U_0$};
-  \draw (TR) -- (4.2,0.55);
-  \draw (4.2,-0.55) -- (BR);
-  \draw (3.75,0.55) -- (4.65,0.55);
-  \draw (3.75,-0.55) -- (4.65,-0.55);
+  \draw (TR) -- (4.2,0.32);
+  \draw (4.2,-0.32) -- (BR);
+  \draw (3.75,0.32) -- (4.65,0.32);
+  \draw (3.75,-0.32) -- (4.65,-0.32);
   \node[right] at (4.8,0) {$C$};
 \end{tikzpicture}
 \end{center}
