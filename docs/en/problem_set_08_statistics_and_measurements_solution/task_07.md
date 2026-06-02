@@ -1,7 +1,7 @@
-# Problem Set 8 – Statistics and Measurements
+
 ## Problem 7 – Simple Pendulum: Measurement of $g$
 
----
+
 
 ### 1. Theoretical Model
 
