@@ -1,4 +1,4 @@
-# Problem Set 8 – Statistics and measurements
+
 ## Problem 4 – Linear regression and determination of acceleration due to gravity (parameter estimation)
 
 ### Theoretical Introduction & Model Transformation
